@@ -23,6 +23,7 @@ RUN npm run build
 
 FROM gcr.io/distroless/nodejs22-debian12
 COPY --from=build-env /app/dist /app
+COPY --from=build-env /app/node_modules /app/node_modules
 COPY --from=package-stage /package.yaml /package.yaml
 COPY --from=package-stage /package.yaml /app/package.yaml
 
