@@ -12,11 +12,14 @@
     "test": "node --test"
   },
   "dependencies": {
+    "@kubernetes-models/apimachinery": "^2.0.2",
+    "@kubernetes-models/base": "^5.0.1",
     "@kubernetes/client-node": "^0.21.0",
     "function-sdk-typescript": "^0.0.4",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
+    "@kubernetes-models/crd-generate": "^5.0.2",
     "@types/yargs": "^17.0.33",
     "typescript": "^5.5.4"
   },
