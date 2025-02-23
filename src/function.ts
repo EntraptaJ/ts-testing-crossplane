@@ -2,7 +2,6 @@ import { RunFunctionRequest, RunFunctionResponse, Severity } from "function-sdk-
 import * as logger from "function-sdk-typescript/src/logger"
 import { PartialMessage } from "@bufbuild/protobuf"
 import * as k8s from '@kubernetes/client-node'
-import * as test from '../tmp/test2'
 
 const kc = new k8s.KubeConfig();
 kc.loadFromDefault();
