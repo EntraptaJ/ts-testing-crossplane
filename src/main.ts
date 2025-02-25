@@ -11,7 +11,7 @@ yargs(hideBin(process.argv))
             .option('debug', {
                 describe: 'Enable debug logging',
                 type: "boolean",
-                default: false,
+                default: true,
             })
             .option('insecure', {
                 describe: 'Disable gRPC transport security',
@@ -21,7 +21,7 @@ yargs(hideBin(process.argv))
             .option('tls-certs-dir', {
                 describe: 'A directory containing mTLS server certs (tls.key and tls.crt), and a CA used to verify clients (ca.crt).',
                 type: "string",
-                default: "",
+                default: process.env.TLS_SERVER_CERTS_DIR || '/tls',
             })
     }, (argv) => {
         if (argv.debug) {

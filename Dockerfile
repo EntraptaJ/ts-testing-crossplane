@@ -29,4 +29,4 @@ COPY --from=package-stage /package.yaml /app/package.yaml
 
 WORKDIR /app
 
-CMD ["--import=tsx", "main.js"]
+CMD ["--import=tsx", "main.js", "serve", "9443"]
