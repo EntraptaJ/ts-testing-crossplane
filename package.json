@@ -16,6 +16,7 @@
     "@kubernetes-models/base": "^5.0.1",
     "@kubernetes/client-node": "^0.21.0",
     "function-sdk-typescript": "^0.0.4",
+    "tsx": "^4.19.3",
     "yargs": "^17.7.2"
   },
   "devDependencies": {

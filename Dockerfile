@@ -28,4 +28,5 @@ COPY --from=package-stage /package.yaml /package.yaml
 COPY --from=package-stage /package.yaml /app/package.yaml
 
 WORKDIR /app
-CMD ["main.js"]
+
+CMD ["--import=tsx", "main.js"]
