@@ -13,7 +13,7 @@ RUN cat input/*.yaml >> /package.yaml
 
 
 FROM node:22-slim AS build-env
-COPY . /app
+COPY package.json package-lock.json src /app/
 WORKDIR /app
 RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=bind,source=package-lock.json,target=package-lock.json \
