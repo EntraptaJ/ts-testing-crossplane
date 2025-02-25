@@ -26,6 +26,8 @@ COPY --from=build-env /app/dist /app
 COPY --from=build-env /app/node_modules /app/node_modules
 COPY --from=package-stage /package.yaml /package.yaml
 COPY --from=package-stage /package.yaml /app/package.yaml
+COPY ./override/function.ts /app/node_modules/function-sdk-typescript/src/function.ts
+
 
 WORKDIR /app
 
